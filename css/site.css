@@ -80,3 +80,18 @@ code[class*="language-"],
 .sticky-footer{
     background-color: var(--primary-color);
 }
+
+.Fizz{
+    color: blue;
+    font-weight: bold;
+}
+
+.Buzz{
+    color: red;
+    font-weight: bold;
+}
+
+.FizzBuzz{
+    color: purple;
+    font-weight: bold;
+}
