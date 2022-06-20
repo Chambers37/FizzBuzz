@@ -1,6 +1,6 @@
 :root{
-    --primary-color: #1d5888;
-    --secondary-color: #ff993b;
+    --primary-color: #22619a;
+    --secondary-color: #ee2c26;
     --dark-color: #292929;
     --white-color: #dff3e4;
 
@@ -63,7 +63,7 @@ main>.container {
 }
 
 .fa-check-square{
-    color: rgb(19, 210, 131);
+    color: var(--secondary-color);
 }
 
 code[class*="language-"],
@@ -71,4 +71,12 @@ code[class*="language-"],
             white-space: pre-wrap;
             word-break: break-all;
             word-wrap: break-word;
+}
+
+.navbar{
+    background-color: var(--primary-color);
+}
+
+.sticky-footer{
+    background-color: var(--primary-color);
 }
