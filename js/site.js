@@ -11,7 +11,7 @@ function getValues() {
     if (Number.isInteger(fizzValue) && Number.isInteger(buzzValue)) {
         
         //Call FizzBuzz
-        let fbArray = fizzBuzz(fizzValue, buzzValue);
+        let fbArray = fizzBuzzTernary(fizzValue, buzzValue);
 
         //Display FizzBuzz values
         displayData(fbArray);
@@ -23,7 +23,8 @@ function getValues() {
     }
 }
 
-function fizzBuzz(fizzValue, buzzValue) {
+//Using loop with IF/ELSE statement
+function fizzBuzzLoop(fizzValue, buzzValue) {
 
     let returnArray = [];
     
@@ -59,6 +60,62 @@ function fizzBuzz(fizzValue, buzzValue) {
 
     return returnArray;
 
+}
+
+//Using switch cases
+function fizzBuzzSwitch(fizzValue, buzzValue) {
+
+    let returnArray = [];
+    let Fizz = false;
+    let Buzz = false;
+
+    for (let i = 1; i <= 100; i++) {
+
+        Fizz = i % fizzValue == 0;
+        Buzz = i % buzzValue == 0;
+
+        switch(true)
+        {
+            case Fizz && Buzz:{
+                returnArray.push('FizzBuzz')
+                break;
+            }
+            case Fizz: {
+                returnArray.push('Fizz');
+                break;
+            }
+            case Buzz: {
+                returnArray.push('Buzz');
+                break;
+            }
+            default: {
+                returnArray.push(i);
+                break;
+            }
+        }
+        
+    }
+
+
+
+
+
+    return returnArray;
+
+}
+
+//Using ternary operator
+function fizzBuzzTernary(fizzValue, buzzValue) {
+    
+    let returnArray = [];
+
+    for (let i = 1; i <= 100; i++) {
+        
+        let value = ((i % fizzValue == 0 ? 'Fizz' : '') + (i % buzzValue == 0 ? 'Buzz' : '') || i)
+
+        returnArray.push(value);       
+    }
+    return returnArray;
 }
 
 //Loop over the array and create tablerow for each item
